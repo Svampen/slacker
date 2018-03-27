@@ -36,4 +36,4 @@ post_message(Token, Channel, Message, Options) ->
 %%
 -spec update(Token :: string(), Timestamp :: string(), Channel :: string(), Text :: string(), Options :: list()) -> http_response().
 update(Token, Timestamp, Channel, Text, Options) ->
-    slacker_request:send("chat.delete", [{"token", Token},{"ts", Timestamp},{"channel", Channel},{"text", Text}], Options).
+    slacker_request:send("chat.update", [{"token", Token},{"ts", Timestamp},{"channel", Channel},{"text", Text}], Options).
